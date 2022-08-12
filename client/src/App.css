@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* DEMOSTRATION COMPONENT */
+
+.todo-container{
+  display:flex;
+  flex-wrap: wrap;
+  width:80%;
+  margin:auto;
+}
+
+.search-container{
+  display:flex;
+  flex-wrap: wrap;
+  width:30%;
+  margin:auto;
+}
+
+.all-items{
+  margin:auto;
+}
+.CRUD-Operations{
+  width:80%;
+  margin:auto;
+  display:flex;
+}
+
+.CRUD-Button{
+  width:40%;
+  margin:auto;
+}
+
+.CRUD-Delete{
+  width:100px;
+  margin-left:20px;
+}
+
+.CRUD-Edit{
+  width:100px;
+  margin:auto;
+}
+.search-result{
+  width:850px;
+  margin:auto;
+  background-color:#e4e4e4;
+  transition: background-color ease-in-out 0.5s;
+}
+.search-result:hover{
+  width:850px;
+  margin:auto;
+  background-color:white;
+  transition: background-color ease-in-out 0.5s;
+}
+
+
+.todo-items{
+  width:350px;
+  background-color:#e4e4e4;
+  margin:1%;
+  transition: background-color ease-in-out 0.5s;
+}
+.todo-items:hover{
+  background-color: white;
+  transition: background-color ease-in-out 0.5s;
+}
+
+/* DEPENDENCY PAGE */
+.dependency-content{
+  width:80%;
+  background-color:#282c34;
+  margin:auto;
+}
+.dependency-HTMLoutput{
+  display:flex;
+  width:70%;
+  margin-top:1%;
+  margin-left:15%;
+  background-color: #e4e4e4;
+  transition: background-color ease-out 0.5s;
+}
+
+.dependency-HTMLoutput:hover{
+  background-color:  white;
+  transition: background-color ease-in 0.5s;
+}
+
+.dependency-short{
+  width:25%;
+  margin-top:1%;
+}
+
+.dependency-description{
+  margin-top:3%;
+  margin-left:3%;
+}
+          
+/* EXPLANATION */ 
+.text-block{
+  width:50%;
+  background-color:#282c34;
+  margin:auto;
+}
+
+/* NAVIGATION */
+/* HOVER ITEM */
+.hover-action{
+  background-color: white;
+  width:125px;
+  transition: background-color ease-out 0.5s;
+}
+
+.hover-action:hover{
+  background-color: #e4e4e4;
+  width:125px;
+  transition: background-color ease-in 0.5s;
+}

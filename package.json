@@ -1,0 +1,33 @@
+{
+  "name": "apollo-client-example",
+  "version": "1.0.0",
+  "description": "This is a project to demonstrate Apollo-Server and GraphQL",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  },
+  "scripts": {
+    "test": "npm run test",
+    "server": "cd server && npm run start ",
+    "start": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMagic-Learner/ToDo-Mock-API.git"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "api",
+    "RESTful"
+  ],
+  "author": "Jason Ma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMagic-Learner/ToDo-Mock-API/issues"
+  },
+  "homepage": "https://github.com/JMagic-Learner.github.io/ToDo-Mock-API"
+}
+
