@@ -2,129 +2,108 @@ import React from 'react'
 
 //IMAGES//
 
-import Diagram1 from '../../Assets/ExpressAPIDiagram1.jpg'
-import Diagram2 from '../../Assets/ExpressAPIDiagram2.jpg'
-import Diagram3 from '../../Assets/ExpressAPIDiagram3.jpg'
-import Diagram4 from '../../Assets/ExpressAPIDiagram4.jpg'
-import Diagram5 from '../../Assets/ExpressAPIDiagram5.jpg'
-import Diagram6 from '../../Assets/ExpressAPIDiagram6.jpg'
-import Diagram7 from '../../Assets/ExpressAPIDiagram7.jpg'
-import Diagram8 from '../../Assets/ExpressAPIDiagram8.jpg'
-import Diagram9 from '../../Assets/ExpressAPIDiagram9.jpg'
+import Diagram1 from '../../Assets/GraphQLDiagram1.jpg'
+import Diagram2 from '../../Assets/GraphQLDiagram2.jpg'
+import Diagram3 from '../../Assets/GraphQLDiagram3.jpg'
+import Diagram4 from '../../Assets/GraphQLDiagram4.jpg'
+import Diagram5 from '../../Assets/GraphQLDiagram5.jpg'
+import Diagram6 from '../../Assets/GraphQLDiagram6.jpg'
+import Diagram7 from '../../Assets/GraphQLDiagram7.jpg'
+import Diagram8 from '../../Assets/GraphQLDiagram8.jpg'
+import Diagram9 from '../../Assets/GraphQLDiagram9.jpg'
+
 function Explanation() {
     return(
         <section className="explanation-container">
-            <h2> EXPLAINING EXPRESS </h2>
+            <h2> EXPLAINING GRAPHQL </h2>
            
             <section className="dependency-content">
-            <h3 className="text-white"> BACK TO BASICS: HTTP REQUESTS </h3>
-            {/* <section className="dependency-content"> */}
+            <h3 className="text-white"> WHAT IS GRAPHQL </h3>
+          
                 <img src={Diagram1}/>
                 <div className="text-block text-white text-justify" >
-                <p> Before we begin explaining Express, we need to go over the basic relationship between a client and server, and how a request is made
-                The above diagram showcases the end-client and the server. The End client is being genearted by an REACT application, while the server is being generated on LocalHost:4000 via Express.
-                For this demonstration, we are able to simultenously run both client and server via a node package known as concurrently.</p>
+                <p> Graph QL is a query language designed by Facebook. It's primary purpose is to provide the end-client a structured query language to request and retrieve data</p>
                 </div>
             </section>
           
             <section className="dependency-content">
-            <h3 className="text-white"> HTTP REQUEST METHODS </h3>
+            <h3 className="text-white"> GRAPHQL vs EXPRESS </h3>
             <img src={Diagram2}/>
                 <div className="text-block text-white text-justify" >
-                <p> There are four primary HTTP Methods: POST, GET, PUT, DELETE. There are other HTTP methods showcased below.
-                These HTTP request methods correspond to CRUD operations( CREATE , READ, UPDATE, DELETE). This demonstration will go over the POST, GET, PUT, DELETE.
+                <p> GraphQL was designed to alleviate some issues with Express. Other than the example above, I would like to spot you an demonstration from another website.
                 </p>
                 </div>
             </section>
             
             <section className="dependency-content">
-            <h3 className="text-white"> THE EXPRESS SERVER: REQUEST PROCESS </h3>
+            <h3 className="text-white"> APOLLO/SERVER and APOLLO/CLIENT </h3>
             <img src={Diagram3}/>
                 
                 <div className="text-block text-white text-justify" >
-                <p> Whenever a request is sent by the client, it is sent in a string format.</p>
-                <p> The reason why is partially explained in in the HTTP accronym, HyperText Transfer Protocol, aka, it is litearlly a text-based protocol </p>
-                <p>
-                However if you have prior experience with APIs, you know that the data sent back to the client is in JSON format ( JavaScript Object Notation )
-                 You might be wondering how Express manages to received a request from the end-client, and parses it into JSON format. This is later explained in THE EXPRESS SERVER: SETTING UP</p>
+                <p> These two utilities help facilitate the creation of a GraphQL server, and also helps guide the client on how to make GraphQL requests.</p>
                 </div>
-            </section>
-            
-              <blockquote className="blockquote text-left">
-                <p className="mb-0"> Express defines the server endpoint we are sending client requests to (Localhost:4000 etc)</p>
-                <p className="mb-0"> Express defines how we parse incoming requests</p>
-                <p className="mb-0"> Express defines how to process incoming requests (Detect GET,POST,PUT,DELETE), and what data is returned</p>
-              </blockquote>
-
-            <section className="dependency-content">
-                <h3 className="text-white"> THE EXPRESS SERVER: DEFINING DATA SET</h3>
                 <img src={Diagram4}/>
                 <div className="text-block text-white text-justify" >
-                <p> In our server file directory, we created a db.js file. This is a static file for right now. You can also configure a database via config.js to load data from there.
-                 Becuase this is a static data-set served from our server.js, every time you use `npm run start`, a new instance of that data would be loaded.</p>   
+                <p> Apollo-Server for example, creates an ApolloServer (which is really just a GraphQL Server), imports a GraphQL query platform (think PostMan, but for graphQL requests), and TYPEDEFS (define what the data is, and what is returned)</p>
+                <p> Apollo-Client connects the front end application to the GraphQL Server. It also imports syntax like useMutation, useQuery (CUSTOM HOOKS) to help execute GraphQL methods</p>
                 </div>
             </section>
 
             <section className="dependency-content">
-            <h3 className="text-white"> THE EXPRESS SERVER: REQUIRED MODULES</h3>
-            <img src={Diagram5} />
-            <div className="text-block text-white" >
-                <p> * See Dependencies for explanation of each requirement * </p>
-            </div>
+            <h3 className="text-white"> GraphQL - MUTATIONS/QUERIES</h3>
+                <img src={Diagram5} />
+                <div className="text-block text-white text-justify" >
+                <p> Queries and Mutations are fundamental building blocks of the graphQL language. There is clear stratification in purpose. You either receive data (QUERIES) or modify data (MUTATIONS).</p>
+                </div>
             </section>
                 
             <section className="dependency-content">
-            <h3 className="text-white"> THE EXPRESS SERVER: SETTING UP</h3>
+            <h3 className="text-white"> GraphQL - Resolvers </h3>
             <img src={Diagram6} />
             
                 <div className="text-block text-white text-left" >
-                <ol> 
-                    <li> First we drill into 'data' for ease of access into our key-value pairs; The reason why we use LET is to allow reassignment once we begin modifying the data </li>
-                    <li> Second, we designate our localhost:3000 (REACT Application) as an approved origin, to prevent any CORS errors </li>
-                    <li>  Third, (VERY IMPORTANT), we use express.json() to help parse incoming request to JSON format.
-                          Before Express 4.+, Express was using something called body-parser to conduct this conversion. Now, Express has it's own built in parser </li>
-                </ol>    
+                    <p> Resolvers define the logic performed on the API dataset once a query identifier is detected</p>
+                    <p> For example, the image on the right is the resolver defined in the server architecture. It is looking for a query identifier named todos.
+                     The image on the left is the resolver defined in the client architecture. When QUERY_TODOS is called, it will send a query named todos to the GraphQl server</p>
+                    <p> The most important thing to note is what is returned. in the right hand side of the image, we know that we are combing through a dataset and sorting the resutls by id ascending
+                     But the image on the left actually determines WHAT data is being given back to the client</p>
+                </div>
+
+                <div className="text-block text-white text-left" >
+                    <p> This means that instead of recieving the all key value pairs, we can instead LIMIT what fields are returned </p>
                 </div>
             </section>
 
             <section className="dependency-content">
-            <h3 className="text-white"> THE EXPRESS SERVER: WHY JSON?</h3>
+            <h3 className="text-white"> GraphQL - TypeDefs, like typescript interface but for API requests </h3>
+            <img src={Diagram7} />
+            
                 <div className="text-block text-white text-left" >
-                <p> Now you might be wondering, why in the world we need JSON to be returned?</p>
-                <p> With JSON format, we can....</p>
-                <ol>
-                    <li> Encode Numbers, Strings, Arrays, Objects ,`null`...</li>
-                    <li> Represent empty arrays and objects easily</li>
-                    <li> Have each key unique, (never repeated).</li>
-                    <li> Have faster responses due to light-syntax</li>
-                    <li> No longer worry about how to represent an array with automatic keys; a JSON encodes the same structure no matter where it is sent</li>
-                    <li> Parse JSON in a multitude of coding languages. Programming languages either have JSON support built in natively. If not, they rely on a library to help PARSE</li>
-                </ol>
+                    <p> Typedefs restrict the data type of items returned via request. In the image above, we define Int, String etc as the expected data types.
+                        Our queries can also define which if the data returned is plural / multiple , [Todos], or singular, Todos. Mutations on the other hand define what variables are expected, and what items are returned
+                    </p>
+                </div>
+
+                <div className="text-block text-white text-left" >
+                    <p> This means that instead of recieving the all key value pairs, we can instead LIMIT what fields are returned </p>
                 </div>
             </section>
-                
+
             <section className="dependency-content">
-            <h3 className="text-white"> THE EXPRESS SERVER: DEFINE HTTP METHODS</h3>
-            <img src={Diagram7} />
-            <div className="text-block text-white text-left" >
-                 <p> 
-                    We begin to define HTTP methods and how we process incoming requests.
-                    Lines 25 - 28 for example, define the GET request. 
-                    This get request also corresponds to the fetch url in client/src/API. 
-                    This get request returns the entire drilledData object.  
-                    Typing in localhost:4000/api/todos would give you the json output of our data.
-                </p>
-            </div>
-           
-            <div className="text-block text-white text-left" >
-                 <p> 
-                    The post method for example, defines the endpoint URL, defines a request (req) and a response (res) as arguments. 
-                    A request is defined by the end-client logic. req.body corresponds to a key-value pair inside the request object.
-                </p>
-            </div>    
+            <h3 className="text-white"> GraphQL - Comparing client requests against Express </h3>
             <img src={Diagram8} />
             <img src={Diagram9} />
-            </section>  
+                
+
+                <div className="text-block text-white text-left" >
+                   <p> GraphQL requires either useMutation, useQuery</p>
+                   <p> We can destructure the return package into loading, error, data</p>
+                   <p> If we wish, we can also specify to automatically refetch data once we perform the query / mutation</p>
+                   <p> We can either define variables in the hook, or we can define the variables once we call the specific query function(addtodos)</p>
+                </div>
+            </section>
+
+            
         </section>
        
     )

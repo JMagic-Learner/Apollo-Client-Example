@@ -42,8 +42,8 @@
 .todo-container{
   display:flex;
   flex-wrap: wrap;
-  width:80%;
-  margin:auto;
+  width:100%;
+  margin-left:7.5%;
 }
 
 .search-container{
@@ -66,6 +66,13 @@
   width:40%;
   margin:auto;
 }
+
+.CRUD-Post{
+  width:500px;
+  margin:auto;
+}
+
+
 
 .CRUD-Delete{
   width:100px;

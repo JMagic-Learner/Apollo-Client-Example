@@ -5,11 +5,11 @@ import './App.css';
 import {  BrowserRouter, Routes, Route} from 'react-router-dom';
 
 // COMPONENTS
-import Demonstration from './Components/Demonstration';
+
 import Navigation from './Components/Navigation'
 
 // PAGES
-import Home from './Pages/Home';
+
 import Demo from './Pages/Demo';
 import Explanation from './Pages/Explanation';
 import Dependency from './Pages/Dependency';
