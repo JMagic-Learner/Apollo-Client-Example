@@ -6,7 +6,7 @@ function Navigation () {
         <nav className="navbar navbar-b navbar-trans navbar-expand-md" id="mainNav">
             
         <div className="container">
-        <h1><a className="navbar-brand " href="/">ToDo API Demo</a> </h1>
+        <h1><a className="navbar-brand " href="/">GraphQL Demo</a> </h1>
           <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
             aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span></span>

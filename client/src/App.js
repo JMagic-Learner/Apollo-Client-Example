@@ -10,9 +10,9 @@ import Navigation from './Components/Navigation'
 
 // PAGES
 
-import Demo from './Pages/Demo';
 import Explanation from './Pages/Explanation';
 import Dependency from './Pages/Dependency';
+import Demonstration from './Components/Demonstration';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
       <Navigation/>
       <Routes>
-            <Route exact path="/" element={<Demo/>}/>
+            <Route exact path="/" element={<Demonstration/>}/>
             <Route exact path="/explanation" element={<Explanation />}/>
             <Route exact path="/dependency" element={<Dependency/>}/>
        </Routes>

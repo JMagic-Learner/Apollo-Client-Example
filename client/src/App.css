@@ -116,9 +116,9 @@
 }
 .dependency-HTMLoutput{
   display:flex;
-  width:70%;
+  width:80%;
+  margin:auto;
   margin-top:1%;
-  margin-left:15%;
   background-color: #e4e4e4;
   transition: background-color ease-out 0.5s;
 }
@@ -128,14 +128,9 @@
   transition: background-color ease-in 0.5s;
 }
 
-.dependency-short{
-  width:25%;
-  margin-top:1%;
-}
 
-.dependency-description{
-  margin-top:3%;
-  margin-left:3%;
+.column-name{
+  width:25%;
 }
           
 /* EXPLANATION */ 

@@ -17,15 +17,29 @@ function Demonstration() {
     if (error) { console.log("We have encountered an error", error) }
     if (data) { console.log("We have found data", data) }
     const todosArray = data?.todos || [];
-    const maxlength = todosArray.length
+
+   // AN example of a common error; 
+   //Compiled with problems:X
+
+// ERROR
+
+// [eslint] 
+// src\Components\Demonstration\index.js
+//   Line 20:42:  React Hook "useQuery" cannot be called inside a callback. React Hooks must be called in a React function component or a custom React Hook function  react-hooks/rules-of-hooks
+//    let todosArray
+//     useEffect(() => {
+//         const { loading, error, data } = useQuery(QUERY_TODOS);
+//         if (loading) {
+//             console.log("We are requesting data")
+//         }
+//         if (error) { console.log("We have encountered an error", error) }
+//         if (data) { console.log("We have found data", data) }
+//         todosArray = data?.todos || [];
+        
+//     }, [])
+
 
     const [searchID, setSearchID] = useState(null);
-    const [maxID, setMaxID] = useState(todosArray[maxlength])
-
-    useEffect(() => {
-        
-        console.log(maxID)
-    }, [maxID])
     // PUT STATE
     const [update, setUpdate] = useState(0);
     const [updateName, setUpdateName] = useState();
